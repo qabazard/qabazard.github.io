@@ -35,7 +35,7 @@
           <a class="contact-link" href="mailto:{{ site.email }}">{{ site.email }}</a>
         {% endif %}
         {% if site.phone %}
-          <a class="contact-link" href="tel:{{ site.phone | replace: ' ', '' }}">{{ site.phone }}</a>
+          <a class="contact-link" href="tel:{{ site.phone | replace: ' ', '' | replace: '-', '' }}">{{ site.phone }}</a>
         {% endif %}
         {% if site.instagram %}
           <a class="contact-link" href="https://instagram.com/{{ site.instagram }}" target="_blank" rel="noopener">@{{ site.instagram }}</a>
