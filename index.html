@@ -1,1 +1,46 @@
-hello
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hamid Qabazard — Architect</title>
+    <meta name="description" content="Architectural practice of Hamid Qabazard in Kuwait." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}" />
+  </head>
+  <body>
+    <main class="page">
+      <h1 class="visually-hidden">Hamid Qabazard</h1>
+
+      <div class="logo-wrapper">
+        <picture>
+          <!-- Replace the three sources below with your real SVGs when available -->
+          <source media="(min-width: 1024px)" srcset="{{ '/Hamid_Qabazard_Logo-02.jpg' | relative_url }}" />
+          <source media="(min-width: 640px)" srcset="{{ '/Hamid_Qabazard_Logo-02.jpg' | relative_url }}" />
+          <img
+            class="logo"
+            src="{{ '/Hamid_Qabazard_Logo-02.jpg' | relative_url }}"
+            alt="Hamid Qabazard logo"
+            decoding="async"
+          />
+        </picture>
+      </div>
+
+      <nav class="contacts" aria-label="Contact information">
+        {% if site.email %}
+          <a class="contact-link" href="mailto:{{ site.email }}">{{ site.email }}</a>
+        {% endif %}
+        {% if site.phone %}
+          <a class="contact-link" href="tel:{{ site.phone | replace: ' ', '' }}">{{ site.phone }}</a>
+        {% endif %}
+        {% if site.instagram %}
+          <a class="contact-link" href="https://instagram.com/{{ site.instagram }}" target="_blank" rel="noopener">@{{ site.instagram }}</a>
+        {% endif %}
+      </nav>
+    </main>
+  </body>
+</html>

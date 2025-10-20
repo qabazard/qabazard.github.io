@@ -1,0 +1,20 @@
+title: "Hamid Qabazard — Architect"
+description: "Architectural practice of Hamid Qabazard in Kuwait."
+url: ""
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme:
+
+# Contact placeholders (fill in below)
+email: hello@example.com
+phone: "+965 5555 5555"
+instagram: hamidqabazard
+
+# Exclude default minima navigation and extras
+minima:
+  skin: classic
+  social_links: []
+
